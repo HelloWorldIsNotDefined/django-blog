@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Blog | Blog List{% endblock %}
+
+{% block content %}
+
+    <div class="header-container">
+        <a href="{% url 'blog:index' %}"><img src="{% static 'img/back.png' %}" alt="Back"></a>
+        <h2 class="center-header">My Blog</h2>
+        <a href="{% url 'blog:create' %}"><img src="{% static 'img/add.png' %}" alt="Add"></a>
+    </div><hr>
+
+    
+    <table class="table table-primary">
+        
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Title</th>
+                <th scope="col">Published</th>
+                <th scope="col">View</th>
+                <th scope="col">Edit</th>
+                <th scope="col">Delete</th>
+            </tr>
+        </thead>
+        
+        <tbody>
+            {% for blog in blogs %}
+
+                <tr class="table-light">
+                        <th scope="row">{{ forloop.counter }}</th>
+                        <td>{{ blog.title}}</a></td>
+                        <td>{{ blog.published_date|time:"TIME_FORMAT"  }}</td>
+                        <td><a href="{% url 'blog:detail' blog.id %}"><img src="{% static 'img/view.png' %}" alt="View"></a></td>
+                        <td><a href="{% url 'blog:update' blog.id %}"><img src="{% static 'img/edit.png' %}" alt="Edit"></a></td>
+                        <td><a href="{% url 'blog:delete' blog.id %}"><img src="{% static 'img/delete.png' %}" alt="Delete"></a></td>
+                    </tr>
+                    
+            {% empty %}
+            <tr class="table-light">
+                <th scope="row">1</th>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            
+
+            {% endfor %}
+            </tbody>
+        </table>
+
+
+{% endblock %}

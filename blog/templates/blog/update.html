@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Blog | Update{% endblock %}
+
+{% block content %}
+
+    <div class="header-container">
+        <a href="{% url 'blog:list' %}"><img src="{% static 'img/back.png' %}" alt="Back"></a>
+        <h2 class="center-header">Update Blog</h2>
+    </div><hr>
+
+    <form method="post" class="col-lg-10">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="update" class="btn btn-danger">
+    </form>
+
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}Blog | Home{% endblock %}
+
+{% block content %}
+
+    <h1>Django Blog</h1><hr>
+
+
+    {% for blog in blogs %}
+
+        <h3>{{ blog.title }}</h3>
+
+        <p>{{ blog.text|truncatewords:50 }}</p>
+        
+        <small><i>Published by {{ blog.author|title }} / {{ blog.published_date|timesince }}</i></small><br>
+
+        <a href="{% url 'blog:detail' blog.id %}">Read More</a><br>
+
+        <hr>
+
+    {% empty %}
+
+        <p>No blog has been added yet.</p>
+
+    {% endfor %}
+
+{% endblock %}
