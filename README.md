@@ -2,7 +2,8 @@
 This is a simple Django blog and I am using `Function-based views`, later I will create advanced blog using `Class-base views` and upload it to my GitHub.
 In this project, the user can create, read, update and delete a blog.
 
-![Django Blog](https://github.com/user-attachments/assets/8403ee22-c313-4cf6-afcc-4f7a467e55e4)
+![Django Blog](https://github.com/user-attachments/assets/1444be6b-b5c1-4291-930f-a7ef0706851e)
+
 
 ## How to Install and Run the Project
 To get this repository, run the following command inside your git enabled terminal.
@@ -57,7 +58,8 @@ The default superuser is:
 
 Once you're logged in, go to `My Blog` in the navigation bar, where you can manage your blog.
 
-![Django Blog 1](https://github.com/user-attachments/assets/afe3d51f-3571-4b99-867d-a02474a446fa)
+![Django Blog 1](https://github.com/user-attachments/assets/5ec5d7fd-e743-44d5-8a78-7c153d750832)
+
 
 # Goodbye!
 Thank you for taking the time to explore this simple Django blog project. I hope you find it helpful and informative as you learn more about Django and web development. If you have any questions, feel free to reach out. Happy coding, and goodbye!
