@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Blog | Confirm{% endblock %}
+
+
+{% block content %}
+
+    <h3>Are you sure you want to delete the "{{ blog.title|title }}" blog?</h3>
+
+    <form action="{% url 'blog:delete' blog.id %}" method="post">
+        {% csrf_token %}
+        <input type="submit" name="confirm" value="Delete" class="btn btn-secondary">
+        <a href="{% url 'blog:list' %}" class="btn btn-danger">Cancel</a>
+    </form>
+
+{% endblock %}
