@@ -46,7 +46,7 @@ After installing and activating the `virtual environment`, run the following com
 $ pip install -r requirements.txt
 ```
 ## How to Use the Project
-In the same directory where `manage.py` is located, run this command to start the servre.
+In the same directory where `manage.py` is located, run this command to start the server.
 ```
 $ py manage.py runserver
 ```
