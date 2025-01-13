@@ -1,5 +1,5 @@
 # Simple Django Blog
-This is a simple Django blog and I am using `Function-based views`, later I will create advanced blog using `Class-base views` and upload it to my GitHub.
+This is a simple Django blog and I am using `FBV (Function-based views)`, later I will create advanced blog using `Class-base views` and upload it to my GitHub.
 In this project, the user can create, read, update and delete a blog.
 
 ![Django Blog](https://github.com/user-attachments/assets/1444be6b-b5c1-4291-930f-a7ef0706851e)
